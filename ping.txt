@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ping Status</title>
+    <style>
+        body {
+            font-family: 'Futura', sans-serif;
+            background-color: #000022;
+            color: white;
+            text-align: center;
+        }
+        .graph {
+            display: inline-block;
+            width: 90%;
+            height: 400px;
+            margin-top: 30px;
+        }
+        .chart-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bot Uptime and Ping</h1>
+    <div class="chart-container">
+        <h2>Uptime (Last 12 hours)</h2>
+        <canvas id="uptimeChart" class="graph"></canvas>
+    </div>
+    <div class="chart-container">
+        <h2>Ping (Last 12 hours)</h2>
+        <canvas id="pingChart" class="graph"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const uptimeData = await fetch('/api/uptime').then(res => res.json());
+        const pingData = await fetch('/api/ping').then(res => res.json());
+
+        const uptimeCtx = document.getElementById('uptimeChart').getContext('2d');
+        const pingCtx = document.getElementById('pingChart').getContext('2d');
+
+        new Chart(uptimeCtx, {
+            type: 'bar',
+            data: {
+                labels: uptimeData.labels,
+                datasets: [{
+                    label: 'Uptime',
+                    data: uptimeData.data,
+                    backgroundColor: uptimeData.data.map(uptime => uptime > 0 ? 'green' : 'red'),
+                }]
+            }
+        });
+
+        new Chart(pingCtx, {
+            type: 'line',
+            data: {
+                labels: pingData.labels,
+                datasets: [{
+                    label: 'Ping (ms)',
+                    data: pingData.data,
+                    borderColor: 'white',
+                    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+                }]
+            }
+        });
+    </script>
+</body>
+</html>

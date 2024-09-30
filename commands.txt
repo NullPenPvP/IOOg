@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>コマンド一覧</title>
+    <style>
+        body {
+            font-family: 'Futuna Now Light', sans-serif;
+            background-color: #000022;
+            color: white;
+            text-align: center;
+        }
+        header {
+            background-color: #333;
+            padding: 10px 0;
+        }
+        header a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .command {
+            margin: 20px;
+            text-align: left;
+        }
+        .command h2 {
+            color: #f0e68c;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">Home</a>
+        <a href="ping.html">Ping</a>
+        <a href="https://discord.gg/ACYkvSh25f">Discord</a>
+        <a href="https://youtube.com/@IOOOkg">Youtube</a>
+        <a href="commands.html">Command</a>
+    </header>
+    <h1>コマンド一覧</h1>
+    <div class="command">
+        <h2>/xp</h2>
+        <p>あなたやほかの人、もしくはBotのXPとレベルを表示します。</p>
+    </div>
+    <div class="command">
+        <h2>/ping</h2>
+        <p>Botの現在のpingと起動時間を表示します。</p>
+    </div>
+    <div class="command">
+        <h2>/quote</h2>
+        <p>ランダムに名言を表示します。</p>
+    </div>
+    <div class="command">
+        <h2>/gacha</h2>
+        <p>ガチャを引いてランダムな結果を表示します。</p>
+    </div>
+    <div class="command">
+        <h2>/server</h2>
+        <p>サーバーの作成日時や人数、ロールなどの詳細を表示します。</p>
+    </div>
+    <div class="command">
+        <h2>/youtube</h2>
+        <p>IOOOkg様のYTチャンネルの表示</p>
+    </div>
+    <div class="command">
+        <h2>/discord_invite</h2>
+        <p>この鯖のDiscord招待リンクを表示します。</p>
+    </div>
+    <div class="command">
+        <h2>/hello</h2>
+        <p>挨拶するスラッシュコマンドです。たぶん、需要ないw</p>
+    </div>
+</body>
+</html>

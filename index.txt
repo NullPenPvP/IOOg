@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IOOgのBotのサイト</title>
+    <style>
+        body {
+            font-family: 'Futuna Now Light', sans-serif;
+            background-color: #000022;
+            color: white;
+            text-align: center;
+        }
+        header {
+            background-color: #333;
+            padding: 10px 0;
+        }
+        header a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        img {
+            max-width: 50%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">Home</a>
+        <a href="ping.html">Ping</a>
+        <a href="https://discord.gg/ACYkvSh25f">Discord</a>
+        <a href="https://youtube.com/@IOOOkg">Youtube</a>
+        <a href="commands.html">Command</a>
+    </header>
+    <h1>IOOgのBotサイトへようこそ！</h1>
+    <img src="https://cdn.discordapp.com/attachments/1210793204409045022/1289493027554852894/IMG_0474.png?ex=66f90577&is=66f7b3f7&hm=444212343110878e61318c12cbb8b28fc75ccc8878b49232e5b1ce2f8fd95356&" alt="IOOg Bot Image">
+</body>
+</html>
